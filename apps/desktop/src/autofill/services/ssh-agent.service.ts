@@ -211,11 +211,9 @@ export class SshAgentService implements OnDestroy {
       )
       .subscribe();
 
-    // Reset sign-approval state on account switch. The memory reset runs unconditionally —
+    // Reset sign-approval state on account switch.
     // account switch is a vault-lock boundary and RememberUntilLock approvals must not survive
-    // it regardless of the user's current SSH-agent setting. The IPC cleanup is gated on the
-    // setting because the V1 sshagent.clearkeys handler isn't registered in the main process
-    // until sshagent.init is called (which only happens when the feature is enabled).
+    // it regardless of the user's current SSH-agent setting.
     // v1 clears the agent keystore here; v2 handles it in the reactive block below.
     this.accountService.activeAccount$
       .pipe(
@@ -227,6 +225,8 @@ export class SshAgentService implements OnDestroy {
         withLatestFrom(this.desktopSettingsService.sshAgentEnabled$),
         concatMap(async ([, enabled]) => {
           this.authorizedSshKeys = {};
+          // the V1 sshagent.clearkeys handler isn't registered in the main process
+          // until sshagent.init is called (which only happens when the feature is enabled).
           if (enabled && !useV2) {
             this.logService.info("Active account changed, clearing SSH keys");
             try {
@@ -239,13 +239,11 @@ export class SshAgentService implements OnDestroy {
         takeUntil(this.destroy$),
       )
       .subscribe({
-        // Memory reset only — IPC cleanup is intentionally omitted. On observable error the
-        // system is in an exceptional state; on completion the service is being torn down with
-        // the rest of the app and the main process will release agent state on exit.
         error: (e: unknown) => {
           this.logService.error("Error in active account observable", e);
           this.authorizedSshKeys = {};
         },
+        // on completion the service is being torn down with the rest of the app and the main process will release agent state on exit.
         complete: () => {
           this.authorizedSshKeys = {};
         },
