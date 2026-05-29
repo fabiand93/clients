@@ -15,7 +15,7 @@
     "message": "Kritik tətbiqlər risklidir"
   },
   "criticalApplicationsAtRisk": {
-    "message": "Critical applications at risk"
+    "message": "Risk altında olan kritik tətbiqlər"
   },
   "allCriticalApps": {
     "message": "Bütün kritik tətbiqlər"
@@ -209,13 +209,40 @@
     }
   },
   "yourDataIsInLetsPutItToWork": {
-    "message": "Your data is in. Let's put it to work."
+    "message": "Veriləriniz gəldi. Gəlin bunları istifadə edək."
   },
   "takeAQuickTourOfAccessIntelligence": {
-    "message": "Take a quick tour of Access Intelligence and see exactly how to turn your org's data into action."
+    "message": "Access Intelligence qısa bir baxış keçirin və təşkilatızın verilərini necə hərəkətə keçirəcəyini görün."
+  },
+  "yourEntireOrgsSecurityInOneView": {
+    "message": "Your entire org's security, in one view"
+  },
+  "accessIntelligenceGivesYouSinglePlace": {
+    "message": "Access Intelligence gives you a single place to see every app, password, and member that's at risk."
+  },
+  "youSetThePrioritiesWeSurfaceTheRisks": {
+    "message": "You set the priorities. We surface the risks."
+  },
+  "youMarkWhichAppsAreMostCritical": {
+    "message": "You mark which apps are most critical, and Access Intelligence automatically identifies the at-risk passwords that need attention first."
+  },
+  "trackImprovementsAcrossYourTeam": {
+    "message": "Track improvements across your team"
+  },
+  "membersAreAutomaticallyNotified": {
+    "message": "Members are automatically notified of at-risk passwords in their Bitwarden extension. No chasing required."
+  },
+  "importYourOrgDataToGetStarted": {
+    "message": "Import your org data to get started"
+  },
+  "onceItHasTheVaultData": {
+    "message": "Once it has the vault data, Access Intelligence will have everything it needs to report on your org's password health."
+  },
+  "accessIntelligenceWelcomeTour": {
+    "message": "Access Intelligence welcome tour"
   },
   "startTour": {
-    "message": "Start tour"
+    "message": "Turu başlat"
   },
   "noDataInOrgTitle": {
     "message": "Heç bir məlumat aşkar olunmadı"
@@ -350,10 +377,10 @@
     "message": "Bu üzvlər, kritik tətbiqlər üçün müdafiəsiz elementlərə erişə bilər."
   },
   "membersWithAtRiskPwds": {
-    "message": "Members with at risk passwords"
+    "message": "Riskli parollara sahib üzvlər"
   },
   "membersWithAtRiskPasswordsAndForCriticalApplications": {
-    "message": "$ATRISKAPPCOUNT$ Members with at risk passwords for $CRITICALAPPCOUNT$ Critical applications",
+    "message": "$ATRISKAPPCOUNT$ üzvün $CRITICALAPPCOUNT$ kritik tətbiq üzrə parolları risk altındadır",
     "placeholders": {
       "atRiskAppCount": {
         "content": "$1",
@@ -396,7 +423,7 @@
     }
   },
   "ofCountTotal": {
-    "message": "of $TOTAL$ total",
+    "message": "/$TOTAL$",
     "placeholders": {
       "total": {
         "content": "$1",
@@ -1502,6 +1529,28 @@
   },
   "unselectAll": {
     "message": "Heç birini seçmə"
+  },
+  "bulkActionsBar": {
+    "message": "Bulk actions"
+  },
+  "bulkActionsBarAnnouncement": {
+    "message": "$COUNT$ item(s) selected. The bulk actions bar is now available at the bottom of the screen. Press $SHORTCUTBINDING$ to toggle focus to the bulk action bar.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "shortcutBinding": {
+        "content": "$2",
+        "example": "Ctrl+B"
+      }
+    }
+  },
+  "selectionCleared": {
+    "message": "Selection cleared"
+  },
+  "additionalActions": {
+    "message": "Additional actions"
   },
   "launch": {
     "message": "Başlat"
@@ -2612,6 +2661,18 @@
   "deleteAccountWarning": {
     "message": "Hesabınızı silmək birdəfəlik prosesdir. Bu əməliyyatın geri dönüşü yoxdur."
   },
+  "deleteAccountOrganizationOwnerWarning": {
+    "message": "Ən azı bir təşkilatın sahibisiniz. Hesabınızı silsəniz, sahibi tək siz olan bütün təşkilatlar da silinəcək."
+  },
+  "cannotDeleteAccountOrganizationOwnerDesc": {
+    "message": "Bir təşkilata sahiblik etdiyiniz müddətcə hesabınızı silə bilməzsiniz. Əvvəlcə sahibliyi təhvil verin və ya təşkilatı silin."
+  },
+  "cannotDeleteAccount": {
+    "message": "Hesab silinə bilmir"
+  },
+  "cannotDeleteAccountDesc": {
+    "message": "Hesabınız bir təşkilata aid olduğu üçün bu əməliyyat icra edilə bilməz. Əlavə məlumat üçün təşkilatınızın inzibatçısı ilə əlaqə saxlayın."
+  },
   "accountDeleted": {
     "message": "Hesab silindi"
   },
@@ -3546,8 +3607,14 @@
   "paymentChargedWithUnpaidSubscription": {
     "message": "Ödənilməmiş abunəliklər üçün ödəniş üsulunuzdan ödəniş alınacaq."
   },
-  "paymentChargedWithTrial": {
-    "message": "Planınızda 7 günlük ödənişsiz sınaq var. Sınaq müddəti bitənə qədər ödəniş metodundan pul çıxılmayacaq. Faktura, hər $INTERVAL$ bir müntəzəm olaraq icra ediləcək. İstənilən vaxt imtina edə bilərsiniz."
+  "paymentChargedWithTrialSpecificLength": {
+    "message": "Your plan comes with a free $TRIAL_LENGTH$ day trial. Your payment method will not be charged until the trial has ended. You may cancel at any time.",
+    "placeholders": {
+      "trial_length": {
+        "content": "$1",
+        "example": "7"
+      }
+    }
   },
   "paymentInformation": {
     "message": "Ödəniş məlumatı"
@@ -3975,7 +4042,7 @@
     }
   },
   "trialPaidInfoMessageSpecificTrialLength": {
-    "message": "Your $PLAN$ $TRIAL_LENGTH$ day free trial will be converted to a paid subscription after $TRIAL_LENGTH$ days.",
+    "message": "$PLAN$ planınız üçün $TRIAL_LENGTH$ günlük ödənişsiz sınaq, $TRIAL_LENGTH$ gün sonra ödənişli abunəliyə çevriləcək.",
     "placeholders": {
       "plan": {
         "content": "$1",
@@ -4369,6 +4436,30 @@
     "message": "Parola sahib fayl \"Send\"i yaradıldı",
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
+  "editedTextSend": {
+    "message": "Edited text Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+  },
+  "editedFileSend": {
+    "message": "Edited file Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+  },
+  "deletedTextSend": {
+    "message": "Deleted text Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+  },
+  "deletedFileSend": {
+    "message": "Deleted file Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+  },
+  "accessedTextSend": {
+    "message": "Accessed text Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+  },
+  "accessedFileSend": {
+    "message": "Accessed file Send",
+    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+  },
   "movedItemIdToOrg": {
     "message": "$ID$ elementi bir təşkilata daşındı.",
     "placeholders": {
@@ -4546,6 +4637,60 @@
       }
     }
   },
+  "viewedIbanItemId": {
+    "message": "Viewed IBAN for item $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Google"
+      }
+    }
+  },
+  "copiedIbanItemId": {
+    "message": "Copied IBAN for item $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Google"
+      }
+    }
+  },
+  "viewedSwiftCodeItemId": {
+    "message": "Viewed SWIFT code for item $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Google"
+      }
+    }
+  },
+  "copiedSwiftCodeItemId": {
+    "message": "Copied SWIFT code for item $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Google"
+      }
+    }
+  },
+  "viewedNationalIdentificationNumberItemId": {
+    "message": "Viewed national identification number for item $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Google"
+      }
+    }
+  },
+  "copiedNationalIdentificationNumberItemId": {
+    "message": "Copied national identification number for item $ID$.",
+    "placeholders": {
+      "id": {
+        "content": "$1",
+        "example": "Google"
+      }
+    }
+  },
   "autofilledItemId": {
     "message": "$ID$ elementi avto-dolduruldu.",
     "placeholders": {
@@ -4591,14 +4736,8 @@
   "discardEditsConfirmation": {
     "message": "Bu görünüşü bağlasanız, saxlanılmamış düzəlişləriniz silinəcək."
   },
-  "discardEdits": {
-    "message": "Düzəlişləri sil"
-  },
   "keepEditing": {
     "message": "Düzəlişə davam"
-  },
-  "backToEditing": {
-    "message": "Düzəlişə qayıt"
   },
   "editedPolicyId": {
     "message": "$ID$ siyasətinə düzəliş edildi.",
@@ -5651,6 +5790,24 @@
   },
   "regenerateInviteLink": {
     "message": "Dəvət keçidini yenidən yarat"
+  },
+  "invalidateInviteLink": {
+    "message": "Dəvət keçidini yararsız et"
+  },
+  "invalidateInviteLinkDesc": {
+    "message": "Bütün domenləri silsəniz, bu dəvət keçidi artıq heç kim üçün işləməyəcək."
+  },
+  "invalidateLink": {
+    "message": "Keçidi yararsız et"
+  },
+  "inviteLinkInvalidated": {
+    "message": "Dəvət keçidi yararsız edildi"
+  },
+  "mustEnterAtLeastOneDomain": {
+    "message": "Ən azı 1 domen daxil edilməlidir"
+  },
+  "deactivateLink": {
+    "message": "Keçidi deaktiv et"
   },
   "inviteByLinkDesc": {
     "message": "Üzvləri təşkilatınıza bir keçidlə dəvət edin. Heç bir rol qeyd olunmayıbsa, ilkin istifadəçi kimi əlavə ediləcəklər."
@@ -8679,7 +8836,7 @@
     "description": "the text, 'SCIM', is an acronym and should not be translated."
   },
   "scimDescriptionV2": {
-    "message": "Automatically provision users and groups by configuring your preferred identity provider with the SCIM URL and API key."
+    "message": "Tərcih etdiyiniz kimlik provayderini SCIM URL və API açarı ilə konfiqurasiya edərək istifadəçiləri və qrupları avtomatik səlahiyyətləndirin."
   },
   "scimLearnMore": {
     "message": "SCIM barədə daha ətraflı"
@@ -10914,7 +11071,7 @@
     "message": "Parol dəyişdirmə bildirişlərini göndər"
   },
   "sendNotifications": {
-    "message": "Send notifications"
+    "message": "Send bildirişləri"
   },
   "assignToCollections": {
     "message": "Kolleksiyalara təyin et"
@@ -12955,7 +13112,7 @@
     }
   },
   "subscribeEnterpriseSubtitleSpecificTrialLength": {
-    "message": "Your $TRIAL_LENGTH$-day $PLAN$ trial starts today. Add a payment method now to continue using these features after your trial ends: ",
+    "message": "$TRIAL_LENGTH$ günlük $PLAN$ sınağınız bu gün başlayır. Sınaq müddəti bitdikdən sonra bu özəllikləri istifadə etməyə davam etmək üçün bir ödəniş üsulu əlavə edin: ",
     "placeholders": {
       "plan": {
         "content": "$1",
@@ -13799,6 +13956,15 @@
   "copyIban": {
     "message": "IBAN-ı kopyala"
   },
+  "copyNameOnAccount": {
+    "message": "Copy name on account"
+  },
+  "copyBranchNumber": {
+    "message": "Copy branch number"
+  },
+  "copySwiftCode": {
+    "message": "Copy SWIFT code"
+  },
   "bankAccountTypeChecking": {
     "message": "Yoxlanılır"
   },
@@ -13891,13 +14057,19 @@
     }
   },
   "more": {
-    "message": "More"
+    "message": "Daha çox"
   },
   "unverifiedBankAccountNotSupportedForUpgrade": {
     "message": "Bu yüksəltmə üçün bank hesabınızın doğrulanması lazımdır. Lütfən bank hesabınızı doğrulayın və ya fərqli bir ödəniş üsulu seçin."
   },
+  "discardEdits": {
+    "message": "Düzəlişləri sil"
+  },
   "discardEditsMessage": {
     "message": "Bu görünüşü bağlasanız, saxlanılmamış düzəlişləriniz silinəcək"
+  },
+  "backToEditing": {
+    "message": "Düzəlişə qayıt"
   },
   "sendHasUnsavedEdits": {
     "message": "Send-də saxlanılmamış düzəlişlər var. Tərk etmək istədiyinizə əminsiniz?",
@@ -13939,19 +14111,19 @@
     "message": "Keçidi ötür"
   },
   "rotateAccountEncryptionKey": {
-    "message": "Rotate account encryption key"
+    "message": "Hesabın şifrələmə açarını yenilə"
   },
   "rotateAccountEncryptionKeyDescription": {
-    "message": "Rotating your account's encryption key generates a new encryption key that is used to re-encrypt all vault data. You should consider rotating your encryption key if your account has been compromised."
+    "message": "Hesabınızın şifrələmə açarını dəyişmək, bütün seyf verilərini təkrar şifrələmək üçün istifadə olunan yeni bir şifrələmə açarı yaradır. Hesabınızın təhlükəsizliyi pozulubsa şifrələmə açarını dəyişdirməyi düşünməlisiniz."
   },
   "rotateAccountEncryptionDialogDescription": {
-    "message": "Generate a new key and re-encrypt all vault data. This is recommended if you believe your account may have been compromised."
+    "message": "Yeni bir açar yaradın və bütün seyf verilərini təkrar şifrələyin. Hesabınızın təhlükəsizliyinin pozulduğuna inanırsınızsa, bu tövsiyə olunan əməliyyatdır."
   },
   "rotateAccountEncryptionCallout": {
-    "message": "You'll be logged out and prompted to re-authenticate. To avoid data corruption, do not close your browser until the process is complete."
+    "message": "Hesabınızdan çıxış ediləcəksiniz və kimliyinizi təkrar doğrulamağınız istəniləcək. Verilərin zədələnməsini önləmək üçün proses tamamlanana qədər brauzerinizi bağlamayın."
   },
   "accountEncryptionKeyRotated": {
-    "message": "Account encryption key rotated"
+    "message": "Hesab şifrələmə açarı yeniləndi"
   },
   "callout": {
     "message": "Elan",
